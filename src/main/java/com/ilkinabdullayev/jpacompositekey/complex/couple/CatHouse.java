@@ -55,4 +55,9 @@ public class CatHouse implements Serializable {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    @Override
+    public String toString() {
+        return "CatHouse{" + "owner=" + owner + ", cat=" + cat + ", brand=" + brand + '}';
+    }
 }

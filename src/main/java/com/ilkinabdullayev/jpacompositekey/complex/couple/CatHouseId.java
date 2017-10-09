@@ -10,23 +10,15 @@ package com.ilkinabdullayev.jpacompositekey.complex.couple;
  * @author ilkinabdullayev
  */
 public class CatHouseId {
-    
-    private int cat;
+
     private int owner;
+    private int cat;
 
     public CatHouseId() {
     }
 
-    public CatHouseId(int cat, int owner) {
-        this.cat = cat;
+    public CatHouseId(int owner, int cat) {
         this.owner = owner;
-    }
-
-    public int getCat() {
-        return cat;
-    }
-
-    public void setCat(int cat) {
         this.cat = cat;
     }
 
@@ -38,11 +30,19 @@ public class CatHouseId {
         this.owner = owner;
     }
 
+    public int getCat() {
+        return cat;
+    }
+
+    public void setCat(int cat) {
+        this.cat = cat;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + this.cat;
-        hash = 97 * hash + this.owner;
+        hash = 23 * hash + this.owner;
+        hash = 23 * hash + this.cat;
         return hash;
     }
 
@@ -58,10 +58,10 @@ public class CatHouseId {
             return false;
         }
         final CatHouseId other = (CatHouseId) obj;
-        if (this.cat != other.cat) {
+        if (this.owner != other.owner) {
             return false;
         }
-        if (this.owner != other.owner) {
+        if (this.cat != other.cat) {
             return false;
         }
         return true;
@@ -69,7 +69,6 @@ public class CatHouseId {
 
     @Override
     public String toString() {
-        return "CatHouseId{" + "cat=" + cat + ", owner=" + owner + '}';
+        return "CatHouseId{" + "owner=" + owner + ", cat=" + cat + '}';
     }
-
 }
