@@ -54,7 +54,7 @@ public class HoyHiy extends HttpServlet {
                     Phone p = new Phone();
                     p.setPhoneId(i);
                     p.setPersonId(i);
-                    p.setNumber("" + (10 * (i + i)));
+                    p.setpNumber("" + (10 * (i + i)));
 
                     em.persist(p);
                 }

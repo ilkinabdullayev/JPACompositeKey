@@ -24,7 +24,7 @@ public class Phone implements Serializable {
     @Id
     private long personId;
 
-    private String number;
+    private String pNumber;
 
     public long getPhoneId() {
         return phoneId;
@@ -42,17 +42,16 @@ public class Phone implements Serializable {
         this.personId = personId;
     }
 
-    public String getNumber() {
-        return number;
+    public String getpNumber() {
+        return pNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setpNumber(String pNumber) {
+        this.pNumber = pNumber;
     }
 
     @Override
     public String toString() {
-        return "Phone{" + "phoneId=" + phoneId + ", personId=" + personId + ", number=" + number + '}';
+        return "Phone{" + "phoneId=" + phoneId + ", personId=" + personId + ", pNumber=" + pNumber + '}';
     }
-
 }
